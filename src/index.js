@@ -90,8 +90,6 @@ import {mxFirebase} from './mx';
 import './mx.css';
 import './index.css';
 
-console.log("Bye")
-
 var firebaseConfig = {
     apiKey: "AIzaSyBLg1JzDcFwnF7e1PMGbgVW0ikqgXY3yw0",
     authDomain: "an-camp.firebaseapp.com",
