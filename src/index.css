@@ -1,0 +1,184 @@
+/* html,
+body,
+.sign-up {
+    height: 100%;
+    font-family: lato
+}
+
+.sign-up-content {
+    width: 400px;
+}
+
+h1 {
+    font-size: 32px;
+    line-height: 38px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #4F4F4F;
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: 8px;
+}
+
+span {
+    font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 24px;
+text-align: center;
+color: #828282;
+display: block
+}
+
+#sign-in-form {
+    background: #FFFFFF;
+    box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.16);
+    border-radius: 16px;
+    padding: 40px;
+    margin-top: 40px;
+}
+
+label {
+    font-family: Lato;
+font-size: 16px;
+line-height: 130%;
+color: #4F4F4F;
+margin: 8px;
+display: block;
+}
+
+input {
+    background: #FFFFFF;
+
+    border: 1px solid #E0E0E0;
+    box-sizing: border-box;
+    border-radius: 4px;
+    height: 53px;  
+    padding: 16px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+    color: #BDBDBD;
+    margin-bottom: 24px;
+}
+
+input::placeholder {
+    color: #BDBDBD;
+}
+
+button {
+    background: #35CE97;    
+    border: 1px solid #35CE97;
+    box-sizing: border-box;
+    border-radius: 88px;
+    height: 56px;
+    font-family: Lato;
+    font-size: 20px;
+    line-height: 24px;
+    align-items: center;
+    text-align: center;
+    text-transform: capitalize;
+    color: #F2F2F2;
+}
+
+#error-message {
+    color: red;
+    margin: 0;
+    margin-bottom: 24px;
+} */
+
+html,
+body,
+
+.sign-up {
+    height: 100%;
+    font-family: lato;  
+}
+
+
+.sign-up-content {
+    width: 400px;
+}
+
+h1 {
+    font-size: 32px;
+    line-height: 38px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #4F4F4F;
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: 8px;
+}
+
+span {
+    font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 24px;
+text-align: center;
+color: #828282;
+display: block
+}
+
+#sign-up-form {
+    font-family: Amatica SC;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.16);
+    border-radius: 16px;
+    padding: 40px;
+    margin-top: 40px;
+}
+
+label {
+    font-family: Lato;
+    font-size: 16px;
+    line-height: 130%;
+    color: #4F4F4F;
+    margin: 8px;
+    display: block;
+}
+
+input {
+    background: #FFFFFF;
+
+    border: 1px solid #E0E0E0;
+    box-sizing: border-box;
+    border-radius: 4px;
+    height: 53px;  
+    padding: 16px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+    color: #BDBDBD;
+    margin-bottom: 24px;
+}
+
+input::placeholder {
+    color: #BDBDBD;
+}
+
+button {
+    background: #35CE97;    
+    border: 1px solid #35CE97;
+    box-sizing: border-box;
+    border-radius: 88px;
+    height: 56px;
+    font-family: Lato;
+    font-size: 20px;
+    line-height: 24px;
+    align-items: center;
+    text-align: center;
+    text-transform: capitalize;
+    color: #F2F2F2;
+}
+
+#error-message {
+    color: red;
+    margin: 0;
+    margin-bottom: 24px;
+} 
