@@ -96,14 +96,14 @@ import route from 'riot-route';
 
 
 var firebaseConfig = {
-    apiKey: "AIzaSyBLg1JzDcFwnF7e1PMGbgVW0ikqgXY3yw0",
-    authDomain: "an-camp.firebaseapp.com",
-    databaseURL: "https://an-camp.firebaseio.com",
-    projectId: "an-camp",
-    storageBucket: "an-camp.appspot.com",
-    messagingSenderId: "523389688134",
-    appId: "1:523389688134:web:1c752a2dbdae9a2c"
-};
+    apiKey: "AIzaSyAYAc2vcChoJWS13Km1ZW8vUpXRkt0-Brk",
+    authDomain: "pet-lover-968a6.firebaseapp.com",
+    databaseURL: "https://pet-lover-968a6.firebaseio.com",
+    projectId: "pet-lover-968a6",
+    storageBucket: "",
+    messagingSenderId: "1004596768709",
+    appId: "1:1004596768709:web:40d29e13973167f5"
+  };
 
 
 mxFirebase.init(firebaseConfig);
