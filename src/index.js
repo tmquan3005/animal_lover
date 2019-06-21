@@ -89,6 +89,11 @@
 import {mxFirebase} from './mx';
 import './mx.css';
 import './index.css';
+import riot from 'riot';
+import "./tags/signin.tag";
+import "./tags/signup.tag";
+import route from 'riot-route';
+
 
 var firebaseConfig = {
     apiKey: "AIzaSyBLg1JzDcFwnF7e1PMGbgVW0ikqgXY3yw0",
@@ -103,8 +108,10 @@ var firebaseConfig = {
 
 mxFirebase.init(firebaseConfig);
 
-
-document.getElementById("sign-up-form").addEventListener("submit", async (e) => {
+route.base("/")
+route("/signin", () => {
+    const signin = riot.mount("div#root", "signin");
+    document.getElementById("sign-up-form").addEventListener("submit", async (e) => {
     e.preventDefault();
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
@@ -114,5 +121,11 @@ document.getElementById("sign-up-form").addEventListener("submit", async (e) => 
     } catch(err) {
     document.getElementById("error-message").innerText = err.message;
     }
+    });
 })
 
+route("/signup",()=>{
+    const signup = riot.mount("div#root","signup")
+})
+
+route.start(true)
