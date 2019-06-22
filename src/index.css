@@ -89,12 +89,11 @@ button {
     margin-bottom: 24px;
 } */
 
-html,
-body,
 
 .sign-up {
     height: 100%;
-    font-family: lato;  
+    font-family: Amatic SC;  
+    background-image: url("assets/signup.jpg");
 }
 
 
@@ -103,7 +102,7 @@ body,
 }
 
 h1 {
-    font-size: 32px;
+    font-size: 20px;
     line-height: 38px;
     text-align: center;
     text-transform: capitalize;
@@ -115,14 +114,14 @@ h1 {
 
 span {
     font-style: normal;
-font-weight: 500;
-font-size: 20px;
-line-height: 24px;
-text-align: center;
-color: #828282;
-display: block
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #828282;
+    display: block
 }
-
+ 
 #sign-up-form {
     font-family: Amatica SC;
     background: #FFFFFF;
@@ -133,33 +132,32 @@ display: block
 }
 
 label {
-    font-family: Lato;
-    font-size: 16px;
-    line-height: 130%;
+    font-family: Amatic SC;
+    font-size: 30px;
+    line-height: 130%;  
     color: #4F4F4F;
     margin: 8px;
     display: block;
 }
 
 input {
-    background: #FFFFFF;
-
+    background: rgb(253, 253, 253);
     border: 1px solid #E0E0E0;
     box-sizing: border-box;
     border-radius: 4px;
     height: 53px;  
     padding: 16px;
-    font-family: Lato;
+    font-family: Amatica SC;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 130%;
-    color: #BDBDBD;
+    color: black;
     margin-bottom: 24px;
 }
 
 input::placeholder {
-    color: #BDBDBD;
+    color: #000000;
 }
 
 button {
@@ -168,7 +166,7 @@ button {
     box-sizing: border-box;
     border-radius: 88px;
     height: 56px;
-    font-family: Lato;
+    font-family: Amatica SC;
     font-size: 20px;
     line-height: 24px;
     align-items: center;
@@ -177,18 +175,15 @@ button {
     color: #F2F2F2;
 }
 
-#error-message {
+#erargin 
+    maror-message {
     color: red;
-    margin: 0;
     margin-bottom: 24px;
 } 
 
-html,
-body,
-
 .sign-in {
     height: 100%;
-    font-family: lato;  
+    font-family: Amatic SC;  
 }
 
 
@@ -209,12 +204,12 @@ h1 {
 
 span {
     font-style: normal;
-font-weight: 500;
-font-size: 20px;
-line-height: 24px;
-text-align: center;
-color: #828282;
-display: block
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #828282;
+    display: block
 }
 
 #sign-in-form {
@@ -225,9 +220,9 @@ display: block
     margin-top: 40px;
 }
 
-label {
-    font-family: Lato;
-    font-size: 16px;
+label {  
+    font-family: Amatic SC;
+    font-size: 35px;
     line-height: 130%;
     color: #4F4F4F;
     margin: 8px;
@@ -235,24 +230,23 @@ label {
 }
 
 input {
-    background: #FFFFFF;
-
+    background: #FAE3D9;
     border: 1px solid #E0E0E0;
     box-sizing: border-box;
     border-radius: 4px;
     height: 53px;  
     padding: 16px;
-    font-family: Lato;
+    font-family: Amatica SC;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 130%;
-    color: #BDBDBD;
+    color: black;
     margin-bottom: 24px;
 }
 
 input::placeholder {
-    color: #BDBDBD;
+    color: #000000;
 }
 
 button {
@@ -261,7 +255,7 @@ button {
     box-sizing: border-box;
     border-radius: 88px;
     height: 56px;
-    font-family: Lato;
+    font-family: Amatica SC;
     font-size: 20px;
     line-height: 24px;
     align-items: center;
