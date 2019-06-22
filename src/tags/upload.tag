@@ -1,26 +1,26 @@
 <upload>
   <div class="grid-center-middle sign-up">
-    <div class="sign-up-content">
+    <div class="upload-content">
         <h1>Up Load</h1>
         <span>Share your pic</span>  
-        <form id="sign-up-form" action="">
+        <form id="upload-form" action="">
             <div>
                 <label for="">Title</label>
-                <input class="fullwidth" type="text" required placeholder="Choose a type">
+                <input class="fullwidth" type="text" id="title" required placeholder="Choose a type">
             </div>
         <div>
             <label for="">Caption</label>
-            <input class="fullwidth" id="email" type="text" required placeholder="Tell something about your pic">
+            <input class="fullwidth" id="caption" type="text" required placeholder="Tell something about your pic">
         </div>
         <div>
             <label for="">Category</label>
-            <select name="" id="category">
+            <select name="" id="category" required>
                 <option>Pet</option>
                 <option>Insect</option>
             </select>
             <div>
                 <label for="">Image</label>
-                <input class="fullwidth" id="email" type="file" required value="upload">
+                <input class="fullwidth" id="image" type="file" required value="upload">
             </div>
         </div>
             <p id="error-message"></p>

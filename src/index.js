@@ -6,6 +6,7 @@ import riot from 'riot';
 import "./tags/signin.tag";
 import "./tags/signup.tag";
 import route from 'riot-route';
+import "./tags/upload.tag";
 
 
 var firebaseConfig = {
@@ -13,7 +14,7 @@ var firebaseConfig = {
     authDomain: "pet-lover-968a6.firebaseapp.com",
     databaseURL: "https://pet-lover-968a6.firebaseio.com",
     projectId: "pet-lover-968a6",
-    storageBucket: "",
+    storageBucket: "pet-lover-968a6.appspot.com",
     messagingSenderId: "1004596768709",
     appId: "1:1004596768709:web:40d29e13973167f5"
   };
@@ -51,8 +52,14 @@ route("/signup",() => {
         if (pass == pass_cnf){
             try{
                 await mxFirebase.signUp(email,pass)
-                firebase.auth().onAuthStateChanged(()=>{
-                    console.log(firebase.auth().currentUser.uid)
+                firebase.auth().onAuthStateChanged(async ()=>{
+                    let id = firebase.auth().currentUser.uid
+                    await firebase.firestore().doc(`users/${id}`).set({
+                        email: email,
+                        username: name,
+                        saved_img:[]
+                    })
+                    
                 })
             }
             catch(err){
@@ -62,8 +69,34 @@ route("/signup",() => {
         else {
             document.getElementById("error-message").textContent = "Password and password confirm are not match"
         }
+    });
+});
+
+
+route("/upload",()=>{
+    const upload = riot.mount("div#root", "upload");
+    document.getElementById("upload-form").addEventListener("submit",async (e) => {
+        e.preventDefault();
+        const title = document.getElementById("title").value;
+        const file = document.getElementById("image").files;
+        let url = await mxFirebase.putFiles(file)
+        const category = document.getElementById("category").value;
+        const caption = document.getElementById("caption").value;
+        console.log(url)
+        try{
+            let id = await mxFirebase.collection('photos').create({
+                title: title,
+                caption: caption,
+                url: url,
+                comment: [],
+                like: 0
+            })
+            console.log(id)
+        }
+        catch(err){
+            console.log(err)
+        }
     })
-    
 })
 
 route.start(true)
