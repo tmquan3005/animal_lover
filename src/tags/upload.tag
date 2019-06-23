@@ -1,12 +1,12 @@
 <upload>
   <div class="grid-center-middle sign-up">
-    <div class="upload-content">
+    <div class="upload-content ">
         <h1>Up Load</h1>
         <span>Share your pic</span>  
         <form id="upload-form" action="">
             <div>
                 <label for="">Title</label>
-                <input class="fullwidth" type="text" id="title" required placeholder="Choose a type">
+                <input class="fullwidth" type="text" id="title" required placeholder="Choose a title">
             </div>
         <div>
             <label for="">Caption</label>

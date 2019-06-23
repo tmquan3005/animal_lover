@@ -1,8 +1,7 @@
 <signup>
-  <div class="grid-center-middle sign-up">
-    <div class="sign-up-content">
-        <h1>Sign Up</h1>
-        <span>The Website For People Love Animal</span>  
+  <div class="grid-center-middle sign-up white-color">
+    <div class="sign-up-content white-background">
+        <h1>Sign Up Today</h1>
         <form id="sign-up-form" action="">
             <div>
                 <label for="">Full Name</label>
@@ -21,7 +20,7 @@
                 <input class="fullwidth" id="password-cnf" type="password" required placeholder="Confirm Password">
             </div>
                 <p id="error-message"></p>
-                <button class="fullwidth">Sign Up</button>
+                <button class="fullwidth btn-signup">Sign Up</button>
             </div>
         </form>  
     </div>

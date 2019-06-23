@@ -120,8 +120,8 @@ const collection = (collectionName) => {
   const create = (data) => {
     return new Promise(async (resolve, reject) => {
       try {
-        await firebaseCollection.doc().set(data);
-        resolve(data);
+        const res = await firebaseCollection.doc().set(data);
+        resolve(res);
       } catch (error) {
         reject(error);
       }

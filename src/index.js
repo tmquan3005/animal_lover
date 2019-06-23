@@ -7,6 +7,7 @@ import "./tags/signin.tag";
 import "./tags/signup.tag";
 import route from 'riot-route';
 import "./tags/upload.tag";
+import "./tags/home.tag";
 
 
 var firebaseConfig = {
@@ -21,6 +22,79 @@ var firebaseConfig = {
 
 
 mxFirebase.init(firebaseConfig);
+
+
+
+document.getElementById("logo").addEventListener('click',() => {
+    window.location.href = ""
+})
+
+document.getElementById("pet").addEventListener('click',() => {
+    window.location.href = "/pet"
+})
+
+document.getElementById("insects").addEventListener('click',() => {
+    window.location.href = "/insect"
+})
+
+document.getElementById("Wild").addEventListener('click',() => {
+    window.location.href = "/wild-animal"
+})
+
+document.getElementById("animals-art").addEventListener('click',() => {
+    window.location.href = "/animal-art"
+})
+
+document.getElementById("login").addEventListener('click',() => {
+    window.location.href = "/signin"
+})
+
+document.getElementById("signup").addEventListener('click',() => {
+    window.location.href = "/signup"
+})
+
+firebase.auth().onAuthStateChanged(async ()=>{
+    let user = await firebase.auth().currentUser
+    let loginDiv = document.getElementById ("login-div");
+    let signUpDiv = document.getElementById ("signup-div");
+    let upload = document.getElementById("upload-div");
+    if (user) {
+        loginDiv.style.display = "none";
+        signUpDiv.style.display = "none";
+        upload.style.display = "flex";
+        // let nav = document.getElementById("nav")
+        // let div = document.createElement("div")
+        // let img = document.createElement("img")
+        // img.src = "./assets/upload.png"
+        // div.setAttribute("id","upload")
+        // div.appendChild(img)
+        // nav.appendChild(div)
+        console.log("upload ready")
+    } else {
+        loginDiv.style.display = "flex";
+        signUpDiv.style.display = "flex";
+        upload.style.display = "none";
+    }
+})
+
+document.getElementById("upload").addEventListener('click',() => {
+    window.location.href = "/upload"
+})
+
+function loadPhoto(data){
+    let img_box = document.getElementById("image-box")
+    for(let i=0;i < data.length;i ++){
+        //tao 1 cai div chua anh
+        //them no vao image-box
+        let div = document.createElement("div")
+        div.classList.add("home-image-div")
+        let img = document.createElement("img");
+        img.src = data[i].url;
+        img.classList.add("home-img")
+        div.appendChild(img)
+        img_box.appendChild(div)
+    }
+}
 
 route.base("/")
 route("/signin", () => {
@@ -87,6 +161,7 @@ route("/upload",()=>{
             let id = await mxFirebase.collection('photos').create({
                 title: title,
                 caption: caption,
+                category: category,
                 url: url,
                 comment: [],
                 like: 0
@@ -98,5 +173,54 @@ route("/upload",()=>{
         }
     })
 })
+route('/', async () => {
+    riot.mount("#root","home")
+    const photos = await mxFirebase.collection('photos').getAll();
+    const opts = {
+        photos: photos
+    }
+    console.log(photos)
+    loadPhoto(photos)    
+});
+
+route("/pet",async ()=>{
+    riot.mount("#root", "home")
+    const filter = {
+        category: 'Pet'
+    }
+    const photos = await mxFirebase.collection('photos').paginate(1,1000, filter);
+    console.log(photos.data)
+    loadPhoto(photos.data)
+});
+
+route("/animal-art",async ()=>{
+    riot.mount("#root", "home")
+    const filter = {
+        category: 'Animal Art'
+    }
+    const photos = await mxFirebase.collection('photos').paginate(1,1000, filter);
+    console.log(photos.data)
+    loadPhoto(photos.data)
+});
+
+route("/insect",async ()=>{
+    riot.mount("#root", "home")
+    const filter = {
+        category: 'Insect'
+    }
+    const photos = await mxFirebase.collection('photos').paginate(1,1000, filter);
+    console.log(photos.data)
+    loadPhoto(photos.data)
+});
+
+route("/wild-animal",async ()=>{
+    riot.mount("#root", "home")
+    const filter = {
+        category: 'Wild Animal'
+    }
+    const photos = await mxFirebase.collection('photos').paginate(1,1000, filter);
+    console.log(photos.data)
+    loadPhoto(photos.data)
+});
 
 route.start(true)
