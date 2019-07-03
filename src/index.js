@@ -156,7 +156,7 @@ route("/upload",()=>{
         let url = await mxFirebase.putFiles(file)
         const category = document.getElementById("category").value;
         const caption = document.getElementById("caption").value;
-        console.log(url)
+        // console.log(url)
         try{
             let id = await mxFirebase.collection('photos').create({
                 title: title,
@@ -166,7 +166,7 @@ route("/upload",()=>{
                 comment: [],
                 like: 0
             })
-            console.log(id)
+            window.location.href = "/"
         }
         catch(err){
             console.log(err)

@@ -17,6 +17,8 @@
             <select name="" id="category" required>
                 <option>Pet</option>
                 <option>Insect</option>
+                <option>Wild Animal</option>
+                <option>Animal Art</option>
             </select>
             <div>
                 <label for="">Image</label>

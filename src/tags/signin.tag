@@ -5,11 +5,11 @@
       <form id="sign-in-form" action="">
       <div>
           <label for="">Email adress</label>
-          <input class="fullwidth" id="email" type="email" required placeholder="email fake@gmail.com">
+          <input class="fullwidth" id="email" type="email" required placeholder="Enter email">
       </div>
       <div>
           <label for="">Password</label>
-          <input class="fullwidth" id="password" type="password" required placeholder="email fake@gmail.com">
+          <input class="fullwidth" id="password" type="password" required placeholder="Enter password">
       </div>
         <p id="error-message"></p>
         <button class="fullwidth">Login</button>
